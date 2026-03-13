@@ -7,6 +7,5 @@ import Form from './Form'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
-      <Form />
   </StrictMode>,
 )
