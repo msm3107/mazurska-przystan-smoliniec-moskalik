@@ -1,14 +1,15 @@
 /*import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'*/
-import './App.css'
 import Form from "./Form.tsx";
-
+import "./Styles/style.css"
 
 function App() {
     return (
         <>
-            <Form/>
+            <div className="mainWindowContainer">
+                <Form/>
+            </div>
         </>
   )
 }
