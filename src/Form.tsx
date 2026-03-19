@@ -41,16 +41,16 @@ export default function Form(){
     return (
         <>
             <div id="tlo">
-
-            <h1>Mazurska przystań</h1>
+                    <h1>Mazurska przystań</h1>
             <div className="formBody">
 
                 <p>Imie:</p>
                 <input
                     type="text"
-                    onChange={e=> setName(e.target.value)}/>
+                    onChange={e=> setName(e.target.value)}
+                    className="form"/>
                 <p>Wybierz sprzęt:</p>
-                <select onChange={e=> setRented(e.target.value)}>
+                <select className="form" onChange={e=> setRented(e.target.value)}>
                     <option>Kajak</option>
                     <option>Rower wodny</option>
                     <option>Omega</option>
@@ -61,28 +61,28 @@ export default function Form(){
                     onChange={e=> setRentalTime(parseInt(e.target.value))}
                     min="1"
                     max="8"
-                    defaultValue="1"/>
-                <p>{rentalTime}</p>
-                {rented=="Omega" && <h3>UWAGA: Wymagany patent!</h3>}
-                Kapok (+5zł) <input type="checkbox" onChange={e=> setSafetyJacket(e.target.checked)}/>
-                Instruktor (50zl/h): <input type="checkbox" onChange={e=> setInstructorHired(e.target.checked)}/>
-                Metoda płatności:
+                    defaultValue="1"
+                    id="suwak"/>
+                <a id="godziny">{rentalTime}</a>
+                {rented=="Omega" && <h3 className="wynik">UWAGA: Wymagany patent!</h3>}
+                <p><label>Kapok (+5zł): <input type="checkbox" onChange={e=> setSafetyJacket(e.target.checked)}/></label></p>
+                <label>Instruktor (50zl/h): <input type="checkbox" onChange={e=> setInstructorHired(e.target.checked)}/></label>
+                <p>Metoda płatności:</p>
                 <select
                     onChange={e=> setPaymentMethod(e.target.value)}
-                    defaultValue="Karta">
+                    defaultValue="Karta"
+                    className="form">
                     <option>Karta</option>
                     <option>BLIK</option>
-                </select>
-                Akceptuje regulamin: <input type="checkbox" onChange={e=> setRules(e.target.checked)}/>
+                </select><br></br>
+                <label>Akceptuje regulamin: <input type="checkbox" onChange={e=> setRules(e.target.checked)}/></label>
+                <div id="cena">
                 <h4>Podgląd ceny: {calculatePrice()}</h4>
-                <button onClick={handleSubmit}>Rezerwacja</button>
-                <h2>{summary}</h2>
+                </div>
+                <button id="klikacz" onClick={handleSubmit}>Rezerwacja</button>
+                <h2 className="wynik">{summary}</h2>
             </div>
 
-                <div id="obraz">
-
-
-                </div>
 
 
             </div>

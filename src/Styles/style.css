@@ -5,10 +5,14 @@
     align-items: flex-start;
     justify-content: center;
     height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
 }
 
-
 .formBody{
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,18 +26,42 @@
     justify-content: center;
     flex-direction: column;
     background-color: mediumseagreen;
-    width: 300px;
-    height: 600px;
+    width: 350px;
+    height: 650px;
     border: 2px solid black;
     border-radius: 50px;
-    padding: 10px;
-    margin: 100px;
+    padding: 30px;
+    margin: 50px;
 
 }
 
 
 h1{
     text-align: center;
-    color: aliceblue;
+    color: black;
 }
+.form{
+    background-color: darkseagreen;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+}
+.wynik{
+    font-size: medium;
+}
+#klikacz{
+    background-color: darkseagreen;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+#godziny{
+    padding-top: 5px;
+}
+#suwak{
+    padding: 5px;
+    width: 190px;
+}
+
 
