@@ -64,7 +64,7 @@ export default function Form(){
                     defaultValue="1"
                     id="suwak"/>
                 <a id="godziny">{rentalTime}</a>
-                {rented=="Omega" && <h3 className="wynik">UWAGA: Wymagany patent!</h3>}
+                {rented=="Omega" && <h4 className="pop">UWAGA: Wymagany patent!</h4>}
                 <p><label>Kapok (+5zł): <input type="checkbox" onChange={e=> setSafetyJacket(e.target.checked)}/></label></p>
                 <label>Instruktor (50zl/h): <input type="checkbox" onChange={e=> setInstructorHired(e.target.checked)}/></label>
                 <p>Metoda płatności:</p>
@@ -80,7 +80,7 @@ export default function Form(){
                 <h4>Podgląd ceny: {calculatePrice()}</h4>
                 </div>
                 <button id="klikacz" onClick={handleSubmit}>Rezerwacja</button>
-                <h2 className="wynik">{summary}</h2>
+                <h2 className="pop">{summary}</h2>
             </div>
 
 
