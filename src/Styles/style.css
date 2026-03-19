@@ -50,6 +50,7 @@ h1{
 }
 .wynik{
     font-size: medium;
+    margin: 10px;
 }
 #klikacz{
     background-color: darkseagreen;
