@@ -40,7 +40,11 @@ export default function Form(){
 
     return (
         <>
+            <div id="tlo">
+
+            <h1>Mazurska przystań</h1>
             <div className="formBody">
+
                 <p>Imie:</p>
                 <input
                     type="text"
@@ -73,6 +77,14 @@ export default function Form(){
                 <h4>Podgląd ceny: {calculatePrice()}</h4>
                 <button onClick={handleSubmit}>Rezerwacja</button>
                 <h2>{summary}</h2>
+            </div>
+
+                <div id="obraz">
+
+
+                </div>
+
+
             </div>
         </>
     )
