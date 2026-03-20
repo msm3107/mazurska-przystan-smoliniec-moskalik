@@ -27,14 +27,16 @@ export default function Form(){
     }
 
     function handleSubmit(){
-        if(name == ""){
+        if(name === "" || name === null){
             setSummary("Uzupełnij imie!")
         }
-        if(rules){
-            setSummary(`Złożono rezerwacje dla ${name}, wypożyczony sprzęt: ${rented}, na czas ${rentalTime} godzin, ${instructorHired ? "z instruktorem" : "bez instruktora"} \n Metoda płatności: ${paymentMethod}`);
-        }
         else{
-            setSummary("Nie zaakceptowano regulaminu!*")
+            if(rules){
+                setSummary(`Złożono rezerwacje dla ${name}, wypożyczony sprzęt: ${rented}, na czas ${rentalTime} godzin, ${instructorHired ? "z instruktorem" : "bez instruktora"} \n Metoda płatności: ${paymentMethod}`);
+            }
+            else{
+                setSummary("Nie zaakceptowano regulaminu!*")
+            }
         }
     }
 
